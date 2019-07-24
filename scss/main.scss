@@ -8,7 +8,7 @@
 body {
     @include background;
     background: $primary-color;
-    color: #ffffff;
+    color: set-text-color($primary-color); //#f7a6a6
     height: 100%;
     margin: 0;
     font-family: 'Montserrat', sans-serif;
@@ -20,17 +20,19 @@ h1,h2,h3{
     margin: 0;
     font-weight: 400;
     &.lg-heading{
-     font-size: 4rem;
+     font-size: 3rem;
     }
     &.sm-heading{
         margin-bottom: 2rem;
         padding: 0.2rem 1rem;
-        background: rgba(lighten($primary-color,2),0.5);
+        background: rgba(lighten($primary-color,5),0.1);
+       // color: #FFF2E6;
+       // color: black; 
     }
 }
 a{
-    color: #ffffff;
-    text-decoration: none;
+    color:set-text-color($primary-color); 
+    text-decoration: none; 
 
 }
 header{
@@ -39,7 +41,7 @@ header{
     width: 100%;
 }
 .text-secondary{
-    color: $secondary-color;
+color: $secondary-color;
 }
 
 main{
@@ -52,7 +54,7 @@ main{
             padding: 0.2rem;
             &:hover{
                 color: $secondary-color;
-                @include easeOut()
+                @include easeOut;
             }
         }
     }
