@@ -62,6 +62,15 @@
         }
     }
 
+    #about {
+        h1{
+            font-size: 2.5rem;
+        }
+
+        h2{
+            font-size: 1rem;
+        }
+    }
     .about-info {
         grid-template-areas: 
         'bioimage'
@@ -73,8 +82,28 @@
         grid-template-columns: 1fr;
     }
 
+    #work {
+        h1{
+            font-size: 2.5rem;
+        }
+
+        h2{
+            font-size: 1rem;
+        }
+    }
+
     .projects {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    #contact {
+        h1{
+            font-size: 2rem;
+        }
+
+        h2{
+            font-size: 1rem;
+        }
     }
 
 }
@@ -83,10 +112,19 @@
 
 @include MediaSm{
     main#home h1{
-        margin-top: 10vh;
+        margin-top: 30vh;
 
     }
 
+    #contact {
+        h1{
+            font-size: 2.5rem;
+        }
+
+        h2{
+            font-size: 1rem;
+        }
+    }
     .projects {
         grid-template-columns: 1fr;
     }

@@ -145,8 +145,8 @@ main {
     main .icons a {
       padding: 0.2rem; }
       main .icons a:hover {
-        color: #f7e92c;
-        transition: all 0.3s ease-out; }
+        transition: all 0.3s ease-out;
+        color: #f7e92c; }
   main#home {
     overflow: hidden; }
     main#home h1 {
@@ -184,9 +184,28 @@ main {
     width: 100%;
     border: 3px #fff solid; }
     .projects img:hover {
+      transition: all 0.3s ease-out;
       opacity: 0.5;
-      border-color: #f7e92c;
-      transition: all 0.3s ease-out; }
+      border-color: #f7e92c; }
+
+.boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 1rem; }
+  .boxes div {
+    font-size: 1.2rem;
+    border: 3px #fff solid;
+    padding: 1rem 2rem;
+    margin-bottom: 3rem;
+    transition: all 0.3s ease-out; }
+    .boxes div:hover {
+      padding: 0.2rem 0.5rem;
+      background: #f7e92c;
+      color: #000; }
+      .boxes div:hover span {
+        color: #000; }
 
 .btn, .btn-dark, .btn-light {
   display: block;
@@ -247,14 +266,30 @@ main {
       background-size: cover;
       width: 150px;
       height: 150px; }
+  #about h1 {
+    font-size: 2.5rem; }
+  #about h2 {
+    font-size: 1rem; }
   .about-info {
     grid-template-areas: 'bioimage' 'bio' 'job1' 'job2' 'job3';
     grid-template-columns: 1fr; }
+  #work h1 {
+    font-size: 2.5rem; }
+  #work h2 {
+    font-size: 1rem; }
   .projects {
-    grid-template-columns: repeat(2, 1fr); } }
+    grid-template-columns: repeat(2, 1fr); }
+  #contact h1 {
+    font-size: 2rem; }
+  #contact h2 {
+    font-size: 1rem; } }
 
 @media screen and (max-width: 500px) {
   main#home h1 {
-    margin-top: 10vh; }
+    margin-top: 30vh; }
+  #contact h1 {
+    font-size: 2.5rem; }
+  #contact h2 {
+    font-size: 1rem; }
   .projects {
     grid-template-columns: 1fr; } }
