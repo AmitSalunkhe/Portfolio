@@ -9,7 +9,7 @@
     width: 28px;
     height: 3px;
     margin: 0 0 5px 0;
-    background: #000;
+    background: #fff;
     transition: all 0.3s ease-out; }
   .menu-btn.close {
     transform: rotate(180deg); }
@@ -39,7 +39,7 @@
   .menu-nav {
     margin: 0;
     padding: 0;
-    background: #b3b3b3;
+    background: black;
     list-style: none;
     transform: translate3d(0, -100%, 0);
     transition: all 0.3s ease-out; }
@@ -73,7 +73,7 @@
     text-transform: uppercase;
     padding: 1rem 0;
     font-weight: 300;
-    color: #000;
+    color: #fff;
     text-decoration: none;
     transition: all 0.3s ease-out; }
     .menu .nav-link:hover {
@@ -90,6 +90,98 @@
 
 .nav-item:nth-child(4) {
   transition-delay: 0.4s; }
+
+* {
+  box-sizing: border-box; }
+
+body {
+  background: #444;
+  color: #fff;
+  height: 100%;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.5; }
+  body#bg-img {
+    background: url("../img/background2.jpg");
+    background-attachment: fixed;
+    background-size: cover; }
+    body#bg-img::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background: rgba(68, 68, 68, 0.7); }
+
+h1, h2, h3 {
+  margin: 0;
+  font-weight: 400; }
+  h1.lg-heading, h2.lg-heading, h3.lg-heading {
+    font-size: 3rem; }
+  h1.sm-heading, h2.sm-heading, h3.sm-heading {
+    margin-bottom: 2rem;
+    padding: 0.2rem 1rem;
+    background: rgba(81, 81, 81, 0.1); }
+
+a {
+  color: #fff;
+  text-decoration: none; }
+
+header {
+  position: fixed;
+  z-index: 2;
+  width: 100%; }
+
+.text-secondary {
+  color: #f7e92c; }
+
+main {
+  padding: 1.2rem;
+  min-height: calc(100vh - 60px); }
+  main .icons {
+    margin-top: 1rem; }
+    main .icons a {
+      padding: 0.2rem; }
+      main .icons a:hover {
+        color: #f7e92c;
+        transition: all 0.3s ease-out; }
+  main#home {
+    overflow: hidden; }
+    main#home h1 {
+      margin-top: 20vh; }
+
+.about-info {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-areas: 'bioimage bio bio'  'job1 job2 job3';
+  grid-template-columns: repeat(3, 1fr); }
+  .about-info .bio-img {
+    grid-area: bioimage;
+    margin: auto;
+    border-radius: 50%;
+    border: #f7e92c 3px solid; }
+  .about-info .bio {
+    grid-area: bio;
+    font-size: 1.1rem; }
+  .about-info .job-1 {
+    grid-area: job1; }
+  .about-info .job-2 {
+    grid-area: job2; }
+  .about-info .job-3 {
+    grid-area: job3; }
+  .about-info .job {
+    background: #515151;
+    padding: 0.5rem;
+    border-bottom: #f7e92c 5px solid; }
+
+#main-footer {
+  text-align: center;
+  padding: 1rem;
+  background: #2b2b2b;
+  color: #fff;
+  height: 60px; }
 
 @media screen and (max-width: 768px) {
   main {
@@ -117,69 +209,11 @@
       background: url("../img/ProfilePic.jpg");
       background-size: cover;
       width: 150px;
-      height: 150px; } }
+      height: 150px; }
+  .about-info {
+    grid-template-areas: 'bioimage' 'bio' 'job1' 'job2' 'job3';
+    grid-template-columns: 1fr; } }
 
 @media screen and (max-width: 500px) {
   main#home h1 {
     margin-top: 10vh; } }
-
-* {
-  box-sizing: border-box; }
-
-body {
-  background: #fff;
-  color: #000;
-  height: 100%;
-  margin: 0;
-  font-family: 'Montserrat', sans-serif;
-  line-height: 1.5; }
-  body#bg-img {
-    background: url("../img/background2.jpg");
-    background-attachment: fixed;
-    background-size: cover; }
-    body#bg-img::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-      background: rgba(255, 255, 255, 0.7); }
-
-h1, h2, h3 {
-  margin: 0;
-  font-weight: 400; }
-  h1.lg-heading, h2.lg-heading, h3.lg-heading {
-    font-size: 3rem; }
-  h1.sm-heading, h2.sm-heading, h3.sm-heading {
-    margin-bottom: 2rem;
-    padding: 0.2rem 1rem;
-    background: rgba(255, 255, 255, 0.1); }
-
-a {
-  color: #000;
-  text-decoration: none; }
-
-header {
-  position: fixed;
-  z-index: 2;
-  width: 100%; }
-
-.text-secondary {
-  color: #f7e92c; }
-
-main {
-  padding: 4rem;
-  height: 100%; }
-  main .icons {
-    margin-top: 1rem; }
-    main .icons a {
-      padding: 0.2rem; }
-      main .icons a:hover {
-        color: #f7e92c;
-        transition: all 0.3s ease-out; }
-  main#home {
-    overflow: hidden; }
-    main#home h1 {
-      margin-top: 20vh; }
